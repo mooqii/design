@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../dist/css/tailwind.css" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+
+<body class="min-h-screen flex flex-col">
+    <!-- main -->
+    <div class="bg-gray-200 flex-grow">
+        <!-- haeader -->
+        <nav id="header" class="fixed w-full z-50 bg-white">
+            <div id="fixnav" class="w-full z-50">
+                <div class="container-1280 items-center  md:flex md:justify-between">
+                    <!--logo & moblie menu / Mobile menu open: "bg-white" -->
+                    <div id="navbar" class="flex items-center justify-between">
+                        <!-- logo  -->
+                        <a class="p-3 flex items-center justify-between" href="http://www.pixcall.com">
+                            <img class="h-10" src="../images/logo.svg">
+                            <img class="h-10" src="../images/logo-text.svg">
+                        </a>
+                        <span class="text-2xl text-gray-dark">Design Systems</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- content -->
+        <div class="w-full py-24 flex flex-col space-y-6">
+            <div class="container-1280 p-4">
+                <div class="title">品牌色</div>
+                <div class="color-box">
+                    <div>
+                        <div class="color bg-brand-dark"></div>
+                        <div class="name">品牌-深</div>
+                        <div class="class">-brand-dark</div>
+                        <div class="info">:active</div>
+                        <botton class="btn-code"></botton>
+                        <pre class="code"><code class="language-css">
+#5033FF
+                        </code></pre>
+                    </div>
+                    <div class="border border-warning">
+                        <div class="color bg-brand"></div>
+                        <div class="name">品牌</div>
+                        <div class="class">-brand</div>
+                        <div class="info">主按钮 链接色</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+#715CFF
+                        </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-brand-light"></div>
+                        <div class="name">品牌-浅</div>
+                        <div class="class">-brand-light</div>
+                        <div class="info">:hover</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+#9E8FFF
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="title">功能色</div>
+                <div class="color-box">
+                    <div>
+                        <div class="color bg-notice"></div>
+                        <div class="name">通知</div>
+                        <div class="class">-notice</div>
+                        <div class="info">中性通知信息</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+#3396FF
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-notice-bg"></div>
+                        <div class="name">通知-背景</div>
+                        <div class="class">-notice-bg</div>
+                        <div class="info">通知信息背景</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(51, 150, 255, 0.4)
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-error"></div>
+                        <div class="name">错误</div>
+                        <div class="class">-error</div>
+                        <div class="info">错误信息</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+#FF3F3F
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-error-bg"></div>
+                        <div class="name">错误-背景</div>
+                        <div class="class">-error-bg</div>
+                        <div class="info">错误信息背景</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(255, 63, 63, 0.4)
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-success"></div>
+                        <div class="name">成功</div>
+                        <div class="class">-success</div>
+                        <div class="info">成功信息</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+#76D219
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-success-bg"></div>
+                        <div class="name">成功-背景</div>
+                        <div class="class">-success-bg</div>
+                        <div class="info">成功背景</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(118, 210, 25, 0.4)
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-warning"></div>
+                        <div class="name">警告</div>
+                        <div class="class">-warning</div>
+                        <div class="info">警告信息</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+#FFAA00
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-warning-bg"></div>
+                        <div class="name">警告-背景</div>
+                        <div class="class">-warning-bg</div>
+                        <div class="info">警告信息背景</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(255, 170, 0, 0.4)
+                    </code></pre>
+                    </div>
+                </div>
+                <div class="title">中性色</div>
+                <div class="color-box">
+                    <div>
+                        <div class="color bg-gray-title"></div>
+                        <div class="name">标题</div>
+                        <div class="class">-gray-title</div>
+                        <div class="info">标题</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(0, 0, 0, 0.8)
+                    </code></pre>
+                    </div>
+                    <div class="border border-warning">
+                        <div class="color bg-gray"></div>
+                        <div class="name">默认</div>
+                        <div class="class">-gray</div>
+                        <div class="info">主文本</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(0, 0, 0, 0.6)
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-gray-secondary"></div>
+                        <div class="name">次要</div>
+                        <div class="class">-gray-secondary</div>
+                        <div class="info">副文本</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(0, 0, 0, 0.45)
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-gray-disable"></div>
+                        <div class="name">灰显</div>
+                        <div class="class">-gray-disable</div>
+                        <div class="info">disabled</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(0, 0, 0, 0.25)
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-gray-border"></div>
+                        <div class="name">边框</div>
+                        <div class="class">-gray-border</div>
+                        <div class="info">边框</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(0, 0, 0, 0.15)
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-gray-dividers"></div>
+                        <div class="name">分割线</div>
+                        <div class="class">-gray-dividers</div>
+                        <div class="info">分割线</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(0, 0, 0, 0.06)
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-gray-bg"></div>
+                        <div class="name">背景</div>
+                        <div class="class">-gray-bg</div>
+                        <div class="info">背景</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(0, 0, 0, 0.04)
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="color bg-gray-bglight"></div>
+                        <div class="name">浅背景</div>
+                        <div class="class">-gray-bglight</div>
+                        <div class="info">表格背景</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+rgba(0, 0, 0, 0.02)
+                    </code></pre>
+                    </div>
+                </div>
+                <div class="title">Size</div>
+                <div class="size-box">
+                    <div>
+                        <div class="font"><span class="text-5xl">我是5xl</span></div>
+                        <div class="name">超超大标题</div>
+                        <div class="class">-5xl</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+font-size: 3rem;
+line-height: 1;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="font"><span class="text-4xl">我是4xl</span></div>
+                        <div class="name">超大标题</div>
+                        <div class="class">-4xl</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+font-size: 2.25rem;
+line-height: 2.5rem;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="font"><span class="text-3xl">我是3xl</span></div>
+                        <div class="name">大标题</div>
+                        <div class="class">-3xl</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+font-size: 1.875rem;
+line-height: 2.25rem;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="font"><span class="text-2xl">我是2xl</span></div>
+                        <div class="name">标题</div>
+                        <div class="class">-2xl</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+font-size: 1.5rem;
+line-height: 2rem;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="font"><span class="text-xl">我是xl</span></div>
+                        <div class="name">小标题</div>
+                        <div class="class">-xl</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+font-size: 1.25rem;
+line-height: 1.75rem;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="font"><span class="text-lg">我是lg</span></div>
+                        <div class="name">大号文字</div>
+                        <div class="class">-lg</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+font-size: 1.125rem;
+line-height: 1.75rem;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="font"><span class="text-base">我是base</span></div>
+                        <div class="name">基准文字</div>
+                        <div class="class">-base</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+font-size: 1rem;
+line-height: 1.5rem;
+                    </code></pre>
+                    </div>
+                    <div class="border border-warning">
+                        <div class="font"><span class="text-sm">我是sm</span></div>
+                        <div class="name">小号文字（默认值）</div>
+                        <div class="class">-sm</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+font-size: 0.875rem;
+line-height: 1.25rem;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="font"><span class="text-xs">我是xs</span></div>
+                        <div class="name">超小文字</div>
+                        <div class="class">-5xl</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+font-size: 0.75rem;
+line-height: 1rem;
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="space-row">
+                            <div class="w-2"></div>
+                        </div>
+                        <div class="name">小间隔</div>
+                        <div class="class">-2</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+0.5rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="space-row">
+                            <div class="w-4"></div>
+                        </div>
+                        <div class="name">小间隔</div>
+                        <div class="class">-4</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+1rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="space-row">
+                            <div class="w-6"></div>
+                        </div>
+                        <div class="name">小间隔</div>
+                        <div class="class">-6</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+1.5rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="space-row">
+                            <div class="w-8"></div>
+                        </div>
+                        <div class="name">小间隔</div>
+                        <div class="class">-8</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+2rem
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="space-col">
+                            <div class="h-2"></div>
+                        </div>
+                        <div class="name">小间隔</div>
+                        <div class="class">-2</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+0.5rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="space-col">
+                            <div class="h-4"></div>
+                        </div>
+                        <div class="name">小间隔</div>
+                        <div class="class">-4</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+1rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="space-col">
+                            <div class="h-6"></div>
+                        </div>
+                        <div class="name">小间隔</div>
+                        <div class="class">-6</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+1.5rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="space-col">
+                            <div class="h-8"></div>
+                        </div>
+                        <div class="name">小间隔</div>
+                        <div class="class">-8</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+2rem
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="component"><button class="btn-lg border border-gray">提交</button></div>
+                        <div class="name">大按钮</div>
+                        <div class="class">.btn-lg</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+@apply inline-block px-4 py-1.5 rounded-md text-base
+                    </code></pre>
+                    </div>
+                    <div class="border border-warning">
+                        <div class="component"><button class="btn border border-gray">提交</button></div>
+                        <div class="name">按钮(默认)</div>
+                        <div class="class">.btn</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+@apply inline-block px-3.5 py-1.5 rounded-md text-sm
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component"><button class="btn-sm border border-gray">提交</button></div>
+                        <div class="name">小按钮</div>
+                        <div class="class">.btn-sm</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+@apply inline-block px-2 py-1 rounded-md text-sm
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div class="border">
+                        <div class="component">
+                            <div class="rounded border border-gray-border w-20 h-20"></div>
+                        </div>
+                        <div class="name">圆角</div>
+                        <div class="class">.rounded</div>
+                        <div class="info">普通按钮</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+border-radius: 0.25rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="rounded-md border border-gray-border w-20 h-20"></div>
+                        </div>
+                        <div class="name">中圆角</div>
+                        <div class="class">.rounded-md</div>
+                        <div class="info">N/A</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+border-radius: 0.375rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="rounded-lg border border-gray-border w-20 h-20"></div>
+                        </div>
+                        <div class="name">大圆角</div>
+                        <div class="class">.rounded-lg</div>
+                        <div class="info">N/A</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+border-radius: 0.5rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="rounded-xl border border-gray-border w-20 h-20"></div>
+                        </div>
+                        <div class="name">超大圆角</div>
+                        <div class="class">.rounded-xl</div>
+                        <div class="info">N/A</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+border-radius: 0.75rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="rounded-2xl border border-gray-border w-20 h-20"></div>
+                        </div>
+                        <div class="name">超级大圆角</div>
+                        <div class="class">.rounded-2xl</div>
+                        <div class="info">N/A</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+border-radius: 1rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="rounded-3xl border border-gray-border w-20 h-20"></div>
+                        </div>
+                        <div class="name">超级超级大圆角</div>
+                        <div class="class">.rounded-3xl</div>
+                        <div class="info">N/A</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+border-radius: 1.5rem
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="rounded-full border border-gray-border w-20 h-20"></div>
+                        </div>
+                        <div class="name">全圆角</div>
+                        <div class="class">.rounded-full</div>
+                        <div class="info">头像</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+border-radius: 9999px
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="component">
+                            <div class="shadow w-20 h-20"></div>
+                        </div>
+                        <div class="name">阴影</div>
+                        <div class="class">.shadow</div>
+                        <div class="info">N/A</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="shadow-lg w-20 h-20"></div>
+                        </div>
+                        <div class="name">大阴影</div>
+                        <div class="class">.shadow-lg</div>
+                        <div class="info">下拉菜单</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="shadow-xl w-20 h-20"></div>
+                        </div>
+                        <div class="name">超大阴影</div>
+                        <div class="class">.shadow-xl</div>
+                        <div class="info">N/A</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+--tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="shadow-inner w-20 h-20"></div>
+                        </div>
+                        <div class="name">内阴影</div>
+                        <div class="class">.shadow-inner</div>
+                        <div class="info">N/A</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+--tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="title">Icon</div>
+                <div class="icon-box">
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="../images/icon-lock.svg" alt=""></div>
+                        <div class="class">icon-lock</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                </div>
+                <div class="title">component</div>
+                <div class="component-box">
+                    <div>
+                        <div class="component"><a class="link-primary" href="#">我是link</a></div>
+                        <div class="name">默认链接</div>
+                        <div class="class">.link-primary</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;a class=&quot;link-primary&quot; href=&quot;#&quot;&gt;link&lt;/a&gt;
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="component"><button class="btn btn-primary">提交</button></div>
+                        <div class="name">主按钮</div>
+                        <div class="class">.btn .btn-primary</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;button class=&quot;btn btn-primary&quot;&gt;提交&lt;/button&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component"><button class="btn btn-primary" disabled>提交</button></div>
+                        <div class="name">主按钮:disabled</div>
+                        <div class="class">.btn .btn-primary</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;button class=&quot;btn btn-primary&quot; disabled&gt;提交&lt;/button&gt;
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="component"><button class="btn btn-outline-primary">确定</button></div>
+                        <div class="name">线性主按钮</div>
+                        <div class="class">.btn .btn-outline-primary</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;button class=&quot;btn btn-outline-primary&quot;&gt;取消&lt;/button&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component"><button class="btn btn-outline-primary" disabled>确定</button></div>
+                        <div class="name">线性主按钮:disabled</div>
+                        <div class="class">.btn .btn-outline-primary</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;button class=&quot;btn btn-outline-primary&quot; disabled&gt;取消&lt;/button&gt;
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="component"><button class="btn btn-secondary">取消</button></div>
+                        <div class="name">次按钮</div>
+                        <div class="class">.btn .btn-secondary</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;button class=&quot;btn btn-secondary&quot;&gt;取消&lt;/button&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component"><button class="btn btn-secondary" disabled>取消</button></div>
+                        <div class="name">次按钮:disabled</div>
+                        <div class="class">.btn .btn-secondary</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;button class=&quot;btn btn-secondary&quot; disabled&gt;取消&lt;/button&gt;
+                    </code></pre>
+                    </div>
+                    <hr />
+                    <div>
+                        <div class="component"><button class="btn btn-disabled" disabled>确认</button></div>
+                        <div class="name">disabled按钮</div>
+                        <div class="class">.btn .btn-disabled</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;button class=&quot;btn btn-disabled&quot;&gt;确认&lt;/button&gt;
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="component">
+                            <div class="relative">
+                                <input class="input-text flex-auto error:border-error" type="text" placeholder="6位数字" />
+                                <div class="hidden top-10 text-error text-xs">验证码错误/请输入验证码</div>
+                            </div>
+                        </div>
+                        <div class="name">文本输入框</div>
+                        <div class="class">👇🏻</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;div class=&quot;relative&quot;&gt;
+&lt;input
+    class=&quot;input-text flex-auto error:border-error&quot;
+    type=&quot;text&quot; placeholder=&quot;6位数字&quot; /&gt;
+&lt;div class=&quot;absolute top-10 text-error text-xs&quot;&gt;验证码错误/请输入验证码&lt;/div&gt;
+&lt;/div&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="relative">
+                                <input class="input-text flex-auto border-error" type="text" placeholder="6位数字" />
+                                <div class="absolute top-10 text-error text-xs">验证码错误/请输入验证码</div>
+                            </div>
+                        </div>
+                        <div class="name">文本输入框</div>
+                        <div class="class">👇🏻</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;div class=&quot;relative&quot;&gt;
+&lt;input
+    class=&quot;input-text flex-auto error:border-error&quot;
+    type=&quot;text&quot; placeholder=&quot;6位数字&quot; /&gt;
+&lt;div class=&quot;absolute top-10 text-error text-xs&quot;&gt;验证码错误/请输入验证码&lt;/div&gt;
+&lt;/div&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="relative">
+                                <input class="input-text pl-9 flex-auto border-error" type="text" placeholder="请输入" />
+                                <img class="absolute top-2 left-2 h-6" src="../images/icon-profile.svg" alt="">
+                                <div class="absolute top-10 text-error text-xs">错误提示</div>
+                            </div>
+                        </div>
+                        <div class="name">文本输入框</div>
+                        <div class="class">👇🏻</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;div class=&quot;relative&quot;&gt;
+&lt;input class=&quot;input-text pl-9 flex-auto border-error&quot; type=&quot;text&quot; placeholder=&quot;请输入&quot; /&gt;
+&lt;img class=&quot;absolute top-2 left-2 h-6&quot; src=&quot;../images/icon-profile.svg&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;absolute top-10 text-error text-xs&quot;&gt;错误提示语&lt;/div&gt;
+&lt;/div&gt;
+                    </code></pre>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="component">
+                            <input class="checkbox" type="checkbox" id="checkbox1" checked>
+                            <label for="checkbox1"></label>
+                        </div>
+                        <div class="name">复选框</div>
+                        <div class="class">👇🏻</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;checkbox1&quot; checked&gt;
+&lt;label for=&quot;checkbox1&quot;&gt;&lt;/label&gt;
+                </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <input class="checkbox" type="checkbox" id="checkbox2" disabled>
+                            <label for="checkbox2"></label>
+                        </div>
+                        <div class="name">复选框:disabled</div>
+                        <div class="class">👇🏻</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;checkbox1&quot; disabled&gt;
+&lt;label for=&quot;checkbox1&quot;&gt;&lt;/label&gt;
+                </code></pre>
+                    </div>
+                </div>
+                <div class="title">widget</div>
+                <div class="widget-box">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

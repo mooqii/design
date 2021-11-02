@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-gray;
+    font-size: 16px;
+  }
+  hr {
+    @apply w-full block;
+  }
+  /* div {
+    @apply border border-blue-300;
+  } */
+  div,
+  span,
+  p,
+  label,
+  a,
+  button,
+  select,
+  textarea,
+  input {
+    @apply text-sm;
+  }
+}
+
+@layer components {
+  .container-1280 {
+    @apply w-full lg:container 2xl:max-w-screen-xl mx-auto;
+  }
+  .btn,
+  .btn-lg,
+  .btn-sm {
+    @apply border rounded-md inline-block;
+  }
+  .btn:disabled,
+  .btn-lg:disabled,
+  .btn-sm:disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+  .btn-lg {
+    @apply px-4 py-1.5 text-base;
+  }
+  .btn {
+    @apply px-3.5 py-1.5 text-sm;
+  }
+  .btn-sm {
+    @apply px-2 py-1 text-sm;
+  }
+  .btn-primary,
+  .btn-primary:disabled:hover,
+  .btn-primary:disabled:active {
+    @apply bg-brand text-white border-brand;
+  }
+  .btn-primary:hover {
+    @apply bg-brand-light border-brand-light;
+  }
+  .btn-primary:active {
+    @apply bg-brand-dark border-brand-dark;
+  }
+  .btn-secondary,
+  .btn-secondary:disabled:hover,
+  .btn-secondary:disabled:active {
+    @apply bg-white  border-gray-border;
+  }
+  .btn-secondary:hover {
+    @apply border-gray-secondary;
+  }
+  .btn-secondary:active {
+    @apply bg-gray-bg border-gray-secondary;
+  }
+  .btn-outline-primary,
+  .btn-outline-primary:disabled:hover,
+  .btn-outline-primary:disabled:active {
+    @apply bg-white text-brand border-brand;
+  }
+  .btn-outline-primary:hover {
+    @apply text-brand-light border-brand-light;
+  }
+  .btn-outline-primary:active {
+    @apply text-brand-dark border-brand-dark;
+  }
+  .btn-disabled {
+    @apply bg-gray-bg text-gray-disable border-0;
+  }
+  .link-primary {
+    @apply text-brand;
+  }
+  .link-primary:hover {
+    @apply text-brand-light;
+  }
+  .modal-box {
+    @apply bg-white rounded-xl shadow-lg p-8 pt-5 mx-auto relative;
+  }
+
+  /* css tab 格式如下：
+        <div class="tab-container">
+            <input type="radio" name="tab" id="tab1">
+            <label class = "tab-item" for="tab1">普通会员</label>
+            <input type="radio" name="tab" id="tab2">
+            <label class = "tab-item" for="tab2">云端会员</label>
+            <div class="tab-contents">
+                <div class="tab-content">
+                    tab1
+                </div>
+                <div class="tab-content">
+                    tab2
+                </div>
+            </div>
+      </div> */
+  .tab-container {
+    font-size: 0;
+  }
+  .tab-container * {
+    @apply text-sm;
+  }
+  .tab-container input {
+    @apply hidden;
+  }
+  .tab-container label {
+    @apply cursor-pointer inline-block relative;
+  }
+  .tab-content {
+    @apply hidden;
+  }
+  .tab-container
+    > input:nth-of-type(1):checked
+    ~ .tab-contents
+    > .tab-content:nth-child(1),
+  .tab-container
+    > input:nth-of-type(2):checked
+    ~ .tab-contents
+    > .tab-content:nth-child(2),
+  .tab-container
+    > input:nth-of-type(3):checked
+    ~ .tab-contents
+    > .tab-content:nth-child(3),
+  .tab-container
+    > input:nth-of-type(4):checked
+    ~ .tab-contents
+    > .tab-content:nth-child(4),
+  .tab-container
+    > input:nth-of-type(5):checked
+    ~ .tab-contents
+    > .tab-content:nth-child(5),
+  .tab-container
+    > input:nth-of-type(6):checked
+    ~ .tab-contents
+    > .tab-content:nth-child(6) {
+    @apply block;
+  }
+
+  /* checkbox 默认样式 
+<input class="checkbox" type="checkbox" id="agreement" disabled>
+<label for="agreement"></label>  */
+
+  .checkbox {
+    @apply hidden;
+  }
+  .checkbox + label {
+    @apply cursor-pointer my-1 h-4 w-4 border rounded border-gray-border flex items-center;
+  }
+  .checkbox:hover + label {
+    @apply border-brand-dark;
+  }
+  .checkbox:checked + label {
+    @apply border-brand bg-brand;
+  }
+  .checkbox:checked + label::after {
+    @apply mx-auto block;
+    line-height: 0;
+    content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='8' width='10'><path d='M9.23674 0.818471C8.79807 0.369566 8.0759 0.369664 7.63736 0.818688L3.74977 4.79919L2.36294 3.37878C1.92429 2.9295 1.20179 2.92942 0.763033 3.3786V3.3786C0.338733 3.81298 0.338672 4.50661 0.762895 4.94107L3.39389 7.63553C3.58905 7.8354 3.9105 7.83541 4.10567 7.63555L9.237 2.38089C9.66125 1.94644 9.66114 1.25278 9.23674 0.818471V0.818471Z' fill='white'/></svg>");
+  }
+  .checkbox:disabled + label {
+    @apply opacity-40 cursor-not-allowed;
+  }
+  .checkbox:disabled:hover + label {
+    @apply border-gray-disable;
+  }
+  /* input */
+  .input-text {
+    @apply p-2 rounded border border-gray-border;
+  }
+  .input-text:focus {
+    @apply border-brand;
+  }
+
+  /* 以下为index.html私有属性 */
+  .title {
+    @apply mt-6 ml-4 text-lg text-gray-title;
+  }
+  .name {
+    @apply text-gray-title font-bold;
+  }
+  .class {
+    @apply text-warning;
+  }
+  .info {
+    @apply text-gray-secondary;
+  }
+  .btn-code {
+    @apply flex items-center mx-auto h-8 px-4 border rounded text-gray-secondary;
+  }
+  .btn-code:hover {
+    @apply border-gray-secondary;
+  }
+  .btn-code:active {
+    @apply bg-gray-bg;
+  }
+  .btn-code::before {
+    @apply inline-block;
+    line-height: 0;
+    content: url("data:image/svg+xml;charset=UTF-8, <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' width='24' height='24' focusable='false' aria-hidden='true'><path fill-rule='evenodd' clip-rule='evenodd' d='M14.4885 4.18603C14.5912 3.364 14.0081 2.61431 13.1861 2.51156C12.3641 2.4088 11.6144 2.99189 11.5116 3.81392L9.51162 19.8139C9.40886 20.636 9.99195 21.3856 10.814 21.4884C11.636 21.5911 12.3857 21.0081 12.4885 20.186L14.4885 4.18603ZM8.06066 5.93931C8.64645 6.5251 8.64645 7.47485 8.06066 8.06063L4.12132 12L8.06066 15.9393C8.64645 16.5251 8.64645 17.4748 8.06066 18.0606C7.47487 18.6464 6.52513 18.6464 5.93934 18.0606L0.93934 13.0606C0.353553 12.4748 0.353553 11.5251 0.93934 10.9393L5.93934 5.93931C6.52513 5.35353 7.47487 5.35353 8.06066 5.93931ZM15.9393 5.93931C16.5251 5.35353 17.4749 5.35353 18.0607 5.93931L23.0607 10.9393C23.6464 11.5251 23.6464 12.4748 23.0607 13.0606L18.0607 18.0606C17.4749 18.6464 16.5251 18.6464 15.9393 18.0606C15.3536 17.4748 15.3536 16.5251 15.9393 15.9393L19.8787 12L15.9393 8.06063C15.3536 7.47485 15.3536 6.5251 15.9393 5.93931Z' fill='currentColor'></path></svg>");
+  }
+  .btn-code + .code {
+    display: none;
+  }
+  .btn-code:hover + .code,
+  .btn-code:active + .code,
+  .code:hover {
+    @apply block absolute bottom-12 z-30;
+    max-width: 400px;
+    max-height: 200px;
+  }
+  .color-box,
+  .size-box,
+  .icon-box,
+  .component-box {
+    @apply flex flex-row flex-wrap;
+  }
+  .color-box > div,
+  .size-box > div,
+  .icon-box > div,
+  .component-box > div {
+    @apply bg-white flex flex-col text-center m-4 p-4 space-y-1 relative;
+  }
+  .component-box > div > div {
+    @apply w-full;
+  }
+  .color {
+    @apply w-24 h-24 m-4;
+  }
+  .font {
+    @apply h-32 flex items-center w-40;
+  }
+  .font > span {
+    @apply border-t border-b border-warning inline-block w-full;
+  }
+  .icon {
+    @apply w-24 h-24 flex items-center justify-center;
+  }
+  .icon:hover {
+    @apply bg-gray-bg;
+  }
+  .icon img {
+    @apply bg-white;
+  }
+  .component,
+  .space-row,
+  .space-col {
+    @apply h-32 flex items-center justify-center w-52;
+  }
+  .component-box .class {
+    @apply w-52;
+  }
+  .space-row > div {
+    @apply border border-t-0 border-b-0 border-warning bg-warning-bg h-20;
+  }
+  .space-col > div {
+    @apply border border-r-0 border-l-0 border-warning bg-warning-bg w-20;
+  }
+  .component-lg {
+    @apply h-32 flex items-center justify-center w-96;
+  }
+}
