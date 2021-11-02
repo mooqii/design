@@ -681,13 +681,13 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
                     <hr>
                     <div>
                         <div class="component">
-                            <div class="relative">
+                            <div>
                                 <input class="input-text flex-auto error:border-error" type="text" placeholder="6位数字" />
-                                <div class="hidden top-10 text-error text-xs">验证码错误/请输入验证码</div>
+                                <div class="hidden text-error">验证码错误/请输入验证码</div>
                             </div>
                         </div>
                         <div class="name">文本输入框</div>
-                        <div class="class">👇🏻</div>
+                        <div class="class">input-text</div>
                         <button class="btn-code"></button>
                         <pre class="code"><code class="language-css">
 &lt;div class=&quot;relative&quot;&gt;
@@ -700,67 +700,90 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
                     </div>
                     <div>
                         <div class="component">
-                            <div class="relative">
-                                <input class="input-text flex-auto border-error" type="text" placeholder="6位数字" />
-                                <div class="absolute top-10 text-error text-xs">验证码错误/请输入验证码</div>
+                            <div>
+                                <input class="input-text flex-auto border-error" type="text" placeholder="6位数字" disabled />
+                                <div class="text-error">验证码错误/请输入验证码</div>
                             </div>
                         </div>
-                        <div class="name">文本输入框</div>
-                        <div class="class">👇🏻</div>
+                        <div class="name">文本输入框:error</div>
+                        <div class="class">input-text</div>
                         <button class="btn-code"></button>
                         <pre class="code"><code class="language-css">
-&lt;div class=&quot;relative&quot;&gt;
-&lt;input
-    class=&quot;input-text flex-auto error:border-error&quot;
-    type=&quot;text&quot; placeholder=&quot;6位数字&quot; /&gt;
-&lt;div class=&quot;absolute top-10 text-error text-xs&quot;&gt;验证码错误/请输入验证码&lt;/div&gt;
-&lt;/div&gt;
+ 
                     </code></pre>
                     </div>
                     <div>
                         <div class="component">
                             <div class="relative">
-                                <input class="input-text pl-9 flex-auto border-error" type="text" placeholder="请输入" />
-                                <img class="absolute top-2 left-2 h-6" src="./src/icons/icon-profile.svg" alt="">
-                                <div class="absolute top-10 text-error text-xs">错误提示</div>
+                                <img class="input-icon" src="./src/icons/icon-profile.svg" alt="">
+                                <input class="input-text w-48 border-error" type="text" placeholder="请输入" required />
+                                <button class="input-clear"></button>
+                                <div class="text-error">错误提示</div>  
                             </div>
                         </div>
                         <div class="name">文本输入框</div>
-                        <div class="class">👇🏻</div>
+                        <div class="class">input-text</div>
                         <button class="btn-code"></button>
                         <pre class="code"><code class="language-css">
-&lt;div class=&quot;relative&quot;&gt;
-&lt;input class=&quot;input-text pl-9 flex-auto border-error&quot; type=&quot;text&quot; placeholder=&quot;请输入&quot; /&gt;
-&lt;img class=&quot;absolute top-2 left-2 h-6&quot; src=&quot;../images/icon-profile.svg&quot; alt=&quot;&quot;&gt;
-&lt;div class=&quot;absolute top-10 text-error text-xs&quot;&gt;错误提示语&lt;/div&gt;
-&lt;/div&gt;
+ 
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="relative">
+                                <img class="input-icon" src="./src/icons/icon-profile.svg" alt="">
+                                <input class="input-text w-48 border-error" type="password" placeholder="请输入" required />
+                                <button class="input-clear"></button>
+                                <button class="input-show-password"></button>
+                                <div class="text-error">错误提示</div>  
+                            </div>
+                        </div>
+                        <div class="name">password</div>
+                        <div class="class">input-text</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+ 
                     </code></pre>
                     </div>
                     <hr>
                     <div>
                         <div class="component">
-                            <input class="checkbox" type="checkbox" id="checkbox1" checked>
-                            <label for="checkbox1"></label>
+                            <div class="w-full">
+                                <input class="checkbox" type="checkbox" id="checkbox1" checked>
+                                <label for="checkbox1">选择 </label>
+                                <input class="checkbox" type="checkbox" id="checkbox2" disabled>
+                                <label for="checkbox2">选择 </label>
+                                <input class="checkbox" type="checkbox" id="checkbox2" disabled checked>
+                                <label for="checkbox2">选择 </label>
+                            </div>
                         </div>
                         <div class="name">复选框</div>
-                        <div class="class">👇🏻</div>
+                        <div class="class">.checkbox</div>
                         <button class="btn-code"></button>
                         <pre class="code"><code class="language-css">
 &lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;checkbox1&quot; checked&gt;
-&lt;label for=&quot;checkbox1&quot;&gt;&lt;/label&gt;
+&lt;label for=&quot;checkbox1&quot;&gt;选择 &lt;/label&gt;
                 </code></pre>
                     </div>
                     <div>
                         <div class="component">
-                            <input class="checkbox" type="checkbox" id="checkbox2" disabled>
-                            <label for="checkbox2"></label>
+                            <div class="w-full">
+                                <input class="radio" type="radio" name="name" id="radio1" />
+                                <label for="radio1">男 </label>
+                                <input class="radio" type="radio" name="name" id="radio2" disabled />
+                                <label for="radio2">女 </label>
+                                <input class="radio" type="radio" name="name" id="radio3" checked disabled />
+                                <label for="radio3">保密 </label>
+                            </div>
                         </div>
-                        <div class="name">复选框:disabled</div>
-                        <div class="class">👇🏻</div>
+                        <div class="name">单选框</div>
+                        <div class="class">.radio</div>
                         <button class="btn-code"></button>
                         <pre class="code"><code class="language-css">
-&lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;checkbox1&quot; disabled&gt;
-&lt;label for=&quot;checkbox1&quot;&gt;&lt;/label&gt;
+&lt;input class=&quot;radio&quot; type=&quot;radio&quot; name=&quot;name&quot; id=&quot;radio1&quot; /&gt;
+&lt;label for=&quot;radio1&quot;&gt;男 &lt;/label&gt;
+&lt;input class=&quot;radio&quot; type=&quot;radio&quot; name=&quot;name&quot; id=&quot;radio2&quot; checked /&gt;
+&lt;label for=&quot;radio2&quot;&gt;女 &lt;/label&gt;
                 </code></pre>
                     </div>
                 </div>
@@ -770,6 +793,24 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
             </div>
         </div>
     </div>
+    <script>
+        window.onload = () => {
+            const clearBtns = document.getElementsByClassName("input-clear")
+            for (let clearBtn of clearBtns) {
+                let input = clearBtn.previousElementSibling
+                input.addEventListener("keyup",function(e) {
+                    if (input.value !== ""){
+                        input.nextElementSibling.classList.add('block')
+                    }
+                })
+                clearBtn.onclick = () => {
+                    clearBtn.previousElementSibling.value = ""
+                    clearBtn.classList.remove('block')
+                    // clearBtn.parentNode.getElementsByClassName("input-text")[0].value = ""
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
