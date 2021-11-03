@@ -681,69 +681,123 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
                     <hr>
                     <div>
                         <div class="component">
-                            <div>
-                                <input class="input-text flex-auto error:border-error" type="text" placeholder="6位数字" />
-                                <div class="hidden text-error">验证码错误/请输入验证码</div>
+                            <div class="input-group border-error">
+                                <img class="h-6 px-1" src="./src/icons/icon-profile.svg" alt="">
+                                <input class="py-2" type="password" placeholder="请输入"/>
+                                <button class="input-clear mr-1"></button>
+                                <img class="h-4 mr-1" src="./src/icons/icon-success.svg"></img>
+                                <button class="input-show-password mr-1"></button>
+                                <button><img class="h-6 mr-1" src="./src/icons/icon-info.svg" alt=""></button>
+                                <div class="error-info">错误提示</div>  
                             </div>
                         </div>
-                        <div class="name">文本输入框</div>
-                        <div class="class">input-text</div>
+                        <div class="name">文本输入框(全)</div>
+                        <div class="class">👇🏻</div>
                         <button class="btn-code"></button>
                         <pre class="code"><code class="language-css">
-&lt;div class=&quot;relative&quot;&gt;
-&lt;input
-    class=&quot;input-text flex-auto error:border-error&quot;
-    type=&quot;text&quot; placeholder=&quot;6位数字&quot; /&gt;
-&lt;div class=&quot;absolute top-10 text-error text-xs&quot;&gt;验证码错误/请输入验证码&lt;/div&gt;
+&lt;div class=&quot;input-group border-error&quot;&gt;
+&lt;img class=&quot;h-6 px-1&quot; src=&quot;./src/icons/icon-profile.svg&quot; alt=&quot;&quot;&gt;
+&lt;input class=&quot;py-2&quot; type=&quot;password&quot; placeholder=&quot;请输入&quot; disabled/&gt;
+&lt;button class=&quot;input-clear mr-1&quot;&gt;&lt;/button&gt;
+&lt;img class=&quot;h-4 mr-1&quot; src=&quot;./src/icons/icon-success.svg&quot;&gt;&lt;/img&gt;
+&lt;button class=&quot;input-show-password mr-1&quot;&gt;&lt;/button&gt;
+&lt;button&gt;&lt;img class=&quot;h-6 mr-1&quot; src=&quot;./src/icons/icon-info.svg&quot; alt=&quot;&quot;&gt;&lt;/button&gt;
+&lt;div class=&quot;error-info&quot;&gt;错误提示&lt;/div&gt;  
 &lt;/div&gt;
+&lt;script&gt;
+        // input-group 相关功能 文本清除按钮  密码显示按钮 文本框样式渲染
+
+        // 文本框清除按钮显示状态
+        function showClearButton(clearBtn) {
+           if (clearBtn.parentElement.getElementsByTagName(&quot;input&quot;)[0].value != &quot;&quot; &amp;&amp; clearBtn.className.indexOf(&quot;block&quot;) != 0 ) {
+                clearBtn.classList.add(&quot;block&quot;)
+         }else if(clearBtn.parentElement.getElementsByTagName(&quot;input&quot;)[0].value == &quot;&quot;) {
+            clearBtn.classList.remove(&quot;block&quot;)
+         }
+        }
+        window.onload = () =&gt; {
+
+            // 文本框输入监听，是否显示清楚按钮
+            const clearBtns = document.getElementsByClassName(&quot;input-clear&quot;)
+            for (let clearBtn of clearBtns) {
+                let input = clearBtn.previousElementSibling
+                input.addEventListener(&quot;keyup&quot;,function(e) {
+                    showClearButton(clearBtn)
+                })
+                clearBtn.onclick = () =&gt; {
+                    clearBtn.previousElementSibling.value = &quot;&quot;
+                    clearBtn.classList.remove(&quot;block&quot;)
+                }
+            }
+
+            // 密码显示及隐藏
+            const showPasswordBtns = document.getElementsByClassName(&quot;input-show-password&quot;)
+            for (let showPasswordBtn of showPasswordBtns){
+                showPasswordBtn.onclick = () =&gt; {
+                     if (showPasswordBtn.parentElement.getElementsByTagName(&quot;input&quot;)[0].type == &quot;password&quot;){
+                        showPasswordBtn.parentElement.getElementsByTagName(&quot;input&quot;)[0].type = &quot;text&quot;
+                        showPasswordBtn.classList.add(&quot;bg-right&quot;)
+                     } else {
+                        showPasswordBtn.parentElement.getElementsByTagName(&quot;input&quot;)[0].type = &quot;password&quot;
+                        showPasswordBtn.classList.remove(&quot;bg-right&quot;)
+                     }
+                }
+            }
+
+            // 文本框样式渲染
+            const inputs = document.getElementsByTagName(&quot;input&quot;)
+            for (let input of inputs){
+                
+                if (input.parentElement.className.indexOf(&quot;input-group&quot;) != -1){
+                    input.onfocus = () =&gt; {
+                        input.parentElement.classList.add(&quot;border-brand&quot;)
+                        input.parentElement.classList.remove(&quot;border-error&quot;)
+                    }
+                    input.onblur = () =&gt; {
+                        input.parentElement.classList.remove(&quot;border-brand&quot;)
+                    }
+                    if(input.disabled){
+                    input.parentElement.classList.add(&quot;bg-gray-bg&quot;)
+                    input.parentElement.classList.add(&quot;hover:border-gray-border&quot;)
+                }
+                }
+            }
+        }
+&lt;/script&gt;
                     </code></pre>
                     </div>
                     <div>
                         <div class="component">
-                            <div>
-                                <input class="input-text flex-auto border-error" type="text" placeholder="6位数字" disabled />
-                                <div class="text-error">验证码错误/请输入验证码</div>
-                            </div>
-                        </div>
-                        <div class="name">文本输入框:error</div>
-                        <div class="class">input-text</div>
-                        <button class="btn-code"></button>
-                        <pre class="code"><code class="language-css">
- 
-                    </code></pre>
-                    </div>
-                    <div>
-                        <div class="component">
-                            <div class="relative">
-                                <img class="input-icon" src="./src/icons/icon-profile.svg" alt="">
-                                <input class="input-text w-48 border-error" type="text" placeholder="请输入" required />
-                                <button class="input-clear"></button>
-                                <div class="text-error">错误提示</div>  
+                            <div class="input-group">
+                                <img class="h-6 px-1" src="./src/icons/icon-profile.svg" alt="">
+                                <input class="py-2" type="text" placeholder="请输入" />
+                                <button class="input-clear mr-1"></button>
                             </div>
                         </div>
                         <div class="name">文本输入框</div>
-                        <div class="class">input-text</div>
-                        <button class="btn-code"></button>
-                        <pre class="code"><code class="language-css">
- 
-                    </code></pre>
                     </div>
                     <div>
                         <div class="component">
-                            <div class="relative">
-                                <img class="input-icon" src="./src/icons/icon-profile.svg" alt="">
-                                <input class="input-text w-48 border-error" type="password" placeholder="请输入" required />
-                                <button class="input-clear"></button>
-                                <button class="input-show-password"></button>
-                                <div class="text-error">错误提示</div>  
+                            <div class="input-group border-error">
+                                <img class="h-6 px-1" src="./src/icons/icon-profile.svg" alt="">
+                                <input class="py-2" type="password" placeholder="请输入" />
+                                <button class="input-clear mr-2"></button>
+                                <button class="input-show-password  mr-1"></button>
+                                <div class="error-info">错误提示</div>  
                             </div>
                         </div>
-                        <div class="name">password</div>
-                        <div class="class">input-text</div>
-                        <button class="btn-code"></button>
-                        <pre class="code"><code class="language-css">
- 
-                    </code></pre>
+                        <div class="name">密码输入框:error</div>
+                    </div>
+                    <div>
+                        <div class="component">
+                            <div class="input-group">
+                                <img class="h-6 px-1" src="./src/icons/icon-profile.svg" alt="">
+                                <input class="py-2" type="text" placeholder="请输入" disabled/>
+                                <button class="input-clear mr-1"></button>
+                                <div class="error-info">错误提示</div>  
+                            </div>
+                        </div>
+                        <div class="name">输入框:disabled</div>
                     </div>
                     <hr>
                     <div>
@@ -794,19 +848,61 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
         </div>
     </div>
     <script>
+        // input-group 相关功能 文本清除按钮  密码显示按钮 文本框样式渲染
+
+        // 文本框清除按钮显示状态
+        function showClearButton(clearBtn) {
+           if (clearBtn.parentElement.getElementsByTagName("input")[0].value != "" && clearBtn.className.indexOf("block") != 0 ) {
+                clearBtn.classList.add("block")
+         }else if(clearBtn.parentElement.getElementsByTagName("input")[0].value == "") {
+            clearBtn.classList.remove("block")
+         }
+        }
         window.onload = () => {
+
+            // 文本框输入监听，是否显示清楚按钮
             const clearBtns = document.getElementsByClassName("input-clear")
             for (let clearBtn of clearBtns) {
                 let input = clearBtn.previousElementSibling
                 input.addEventListener("keyup",function(e) {
-                    if (input.value !== ""){
-                        input.nextElementSibling.classList.add('block')
-                    }
+                    showClearButton(clearBtn)
                 })
                 clearBtn.onclick = () => {
                     clearBtn.previousElementSibling.value = ""
-                    clearBtn.classList.remove('block')
-                    // clearBtn.parentNode.getElementsByClassName("input-text")[0].value = ""
+                    clearBtn.classList.remove("block")
+                }
+            }
+
+            // 密码显示及隐藏
+            const showPasswordBtns = document.getElementsByClassName("input-show-password")
+            for (let showPasswordBtn of showPasswordBtns){
+                showPasswordBtn.onclick = () => {
+                     if (showPasswordBtn.parentElement.getElementsByTagName("input")[0].type == "password"){
+                        showPasswordBtn.parentElement.getElementsByTagName("input")[0].type = "text"
+                        showPasswordBtn.classList.add("bg-right")
+                     } else {
+                        showPasswordBtn.parentElement.getElementsByTagName("input")[0].type = "password"
+                        showPasswordBtn.classList.remove("bg-right")
+                     }
+                }
+            }
+
+            // 文本框样式渲染
+            const inputs = document.getElementsByTagName("input")
+            for (let input of inputs){
+                
+                if (input.parentElement.className.indexOf("input-group") != -1){
+                    input.onfocus = () => {
+                        input.parentElement.classList.add("border-brand")
+                        input.parentElement.classList.remove("border-error")
+                    }
+                    input.onblur = () => {
+                        input.parentElement.classList.remove("border-brand")
+                    }
+                    if(input.disabled){
+                    input.parentElement.classList.add("bg-gray-bg")
+                    input.parentElement.classList.add("hover:border-gray-border")
+                }
                 }
             }
         }
