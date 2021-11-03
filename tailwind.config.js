@@ -5,13 +5,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      // backgroundImage: theme => ({
-      //           'main': "url('../../src/images/bg-main.png')",
-      //           }),
       colors: {
         brand: {
-          darkest: '#5033FF',
-          dark: '#5033FF',
+          darkest: '#4938B1',
+          dark: '#5B4AD3',
           DEFAULT: '#715CFF',
           light: 'rgba(113, 92, 255, 0.4)',
         },

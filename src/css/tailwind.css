@@ -46,7 +46,7 @@
   .btn,
   .btn-lg,
   .btn-sm {
-    @apply border rounded-md inline-block;
+    @apply rounded-md inline-block;
   }
   .btn-lg {
     @apply px-6 py-2 text-base;
@@ -57,21 +57,25 @@
   .btn-sm {
     @apply px-2 py-1 text-sm;
   }
+  .btn-primary,
+  .btn-secondary {
+    @apply border;
+  }
   .btn-primary:disabled,
   .btn-secondary:disabled,
-  .btn-outline-primary:disabled {
+  .btn-link:disabled {
     @apply opacity-40;
   }
   .btn-primary,
   .btn-primary:disabled:hover,
   .btn-primary:disabled:active {
-    @apply bg-brand text-white border-brand;
+    @apply bg-brand text-light-title border-brand;
   }
   .btn-primary:hover {
-    @apply bg-brand-light border-brand-light;
+    @apply bg-brand-dark border-brand-dark;
   }
   .btn-primary:active {
-    @apply bg-brand-dark border-brand-dark;
+    @apply bg-brand-darkest border-brand-darkest;
   }
   .btn-secondary,
   .btn-secondary:disabled:hover,
@@ -79,33 +83,27 @@
     @apply bg-white  border-gray-border text-gray-title;
   }
   .btn-secondary:hover {
-    @apply text-gray;
-  }
-  .btn-secondary:active {
-    @apply text-gray-title;
-  }
-  .btn-outline-primary,
-  .btn-outline-primary:disabled:hover,
-  .btn-outline-primary:disabled:active {
-    @apply bg-white text-brand border-brand;
-  }
-  .btn-outline-primary:hover {
-    @apply text-brand-light border-brand-light;
-  }
-  .btn-outline-primary:active {
     @apply text-brand-dark border-brand-dark;
   }
-  .btn-disabled {
-    @apply bg-gray-disable text-white border-0;
+  .btn-secondary:active {
+    @apply text-brand-darkest border-brand-darkest;
+  }
+  .btn-link,
+  .btn-link:disabled:hover,
+  .btn-link:disabled:active {
+    @apply text-brand;
   }
   .btn-disabled {
-    @apply opacity-100;
+    @apply bg-gray-bg text-gray-disable border-gray-border cursor-not-allowed;
   }
   .link-primary {
     @apply text-brand;
   }
   .link-primary:hover {
-    @apply text-brand-light;
+    @apply text-brand-dark;
+  }
+  .link-primary:active {
+    @apply text-brand-darkest;
   }
 
   /* checkbox 默认样式 */
@@ -199,7 +197,6 @@
     @apply block;
   }
 
-
   /* input group
   <div class="input-group border-error">
     <img class="h-6 px-1" src="./src/icons/icon-profile.svg" alt="">
@@ -211,9 +208,9 @@
   .input-group {
     @apply border rounded border-gray-border flex flex-row items-center relative flex-wrap;
   }
-  .input-group > input  {
+  .input-group > input {
     @apply outline-none flex-1 rounded;
-    min-width:1rem;
+    min-width: 1rem;
   }
   .input-group .error-info {
     @apply w-full h-0 overflow-visible text-error text-left;
@@ -224,7 +221,7 @@
   .input-group button {
     @apply opacity-60;
   }
-  .input-group button:hover{
+  .input-group button:hover {
     @apply opacity-100;
   }
   .input-clear {
@@ -235,15 +232,11 @@
     @apply h-6 w-6 mx-1 bg-left bg-cover;
     background-image: url("data:image/svg+xml;charset=utf-8,<svg width='48' height='24' viewBox='0 0 48 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M5.57147 8.85352C7.16401 10.8429 9.47834 12.0949 12.0542 12.0949C14.6301 12.0949 16.9444 10.8429 18.5369 8.85352' stroke='black' stroke-linecap='round'/><path d='M12.0542 12.0947V16.1464' stroke='black' stroke-linecap='round' stroke-linejoin='round'/><path d='M7.65525 11.3434L5.57149 14.469' stroke='black' stroke-linecap='round' stroke-linejoin='round'/><path d='M17.0102 11.2845L18.906 14.5276' stroke='black' stroke-linecap='round' stroke-linejoin='round'/><path d='M34.2786 11.5C34.2786 10.9989 34.4733 10.5182 34.8198 10.1639C35.1663 9.80951 35.6363 9.61043 36.1263 9.61043C36.6163 9.61043 37.0863 9.80951 37.4328 10.1639C37.7793 10.5182 37.974 10.9989 37.974 11.5C37.974 12.0011 37.7793 12.4818 37.4328 12.8361C37.0863 13.1905 36.6163 13.3896 36.1263 13.3896C35.6363 13.3896 35.1663 13.1905 34.8198 12.8361C34.4733 12.4818 34.2786 12.0011 34.2786 11.5ZM43.2893 11.9353C41.7254 15.3044 39.3614 17 36.1923 17C33.0216 17 30.6592 15.3044 29.0953 11.9336C29.0325 11.7977 29 11.6494 29 11.4992C29 11.3489 29.0325 11.2006 29.0953 11.0647C30.6592 7.69555 33.0232 6 36.1923 6C39.363 6 41.7254 7.69555 43.2893 11.0664C43.4164 11.3397 43.4164 11.6569 43.2893 11.9353ZM36.1263 8.53068C34.5228 8.53068 33.2228 9.86012 33.2228 11.5C33.2228 13.1399 34.5228 14.4693 36.1263 14.4693C37.7298 14.4693 39.0298 13.1399 39.0298 11.5C39.0298 9.86012 37.7298 8.53068 36.1263 8.53068Z' fill='black' fill-opacity='0.8'/></svg>");
   }
- 
 
   /* 对话框 */
   .modal-box {
     @apply bg-white rounded-xl shadow-lg p-8 pt-5 mx-auto relative;
   }
-
-
-
 
   /* 以下为index.html私有属性 */
   /* 以下为index.html私有属性 */
@@ -278,7 +271,7 @@
     content: url("data:image/svg+xml;charset=UTF-8, <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' width='24' height='24' focusable='false' aria-hidden='true'><path fill-rule='evenodd' clip-rule='evenodd' d='M14.4885 4.18603C14.5912 3.364 14.0081 2.61431 13.1861 2.51156C12.3641 2.4088 11.6144 2.99189 11.5116 3.81392L9.51162 19.8139C9.40886 20.636 9.99195 21.3856 10.814 21.4884C11.636 21.5911 12.3857 21.0081 12.4885 20.186L14.4885 4.18603ZM8.06066 5.93931C8.64645 6.5251 8.64645 7.47485 8.06066 8.06063L4.12132 12L8.06066 15.9393C8.64645 16.5251 8.64645 17.4748 8.06066 18.0606C7.47487 18.6464 6.52513 18.6464 5.93934 18.0606L0.93934 13.0606C0.353553 12.4748 0.353553 11.5251 0.93934 10.9393L5.93934 5.93931C6.52513 5.35353 7.47487 5.35353 8.06066 5.93931ZM15.9393 5.93931C16.5251 5.35353 17.4749 5.35353 18.0607 5.93931L23.0607 10.9393C23.6464 11.5251 23.6464 12.4748 23.0607 13.0606L18.0607 18.0606C17.4749 18.6464 16.5251 18.6464 15.9393 18.0606C15.3536 17.4748 15.3536 16.5251 15.9393 15.9393L19.8787 12L15.9393 8.06063C15.3536 7.47485 15.3536 6.5251 15.9393 5.93931Z' fill='gray'></path></svg>");
   }
   .code code {
-    max-height:200px
+    max-height: 200px;
   }
   .btn-code + .code {
     display: none;
@@ -302,8 +295,23 @@
   .component-box > div {
     @apply bg-white flex flex-col text-center m-4 p-4 space-y-1 relative;
   }
+  .dark > div {
+    @apply bg-gray text-light;
+  }
+  .dark .name {
+    @apply text-light-title;
+  }
+  .dark .info {
+    @apply text-light-secondary;
+  }
   .color {
-    @apply w-24 h-24 m-4;
+    @apply w-24 h-24;
+  }
+  .color-dark {
+    @apply w-32 h-32 p-4 bg-gray;
+  }
+  .color-dark > div {
+    @apply w-full h-full;
   }
   .font {
     @apply h-32 flex items-center w-40;
