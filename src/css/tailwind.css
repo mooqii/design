@@ -385,8 +385,11 @@
   .icon:hover {
     @apply bg-gray-bg;
   }
-  .icon img {
-    @apply bg-white;
+  .dark .icon:hover {
+    @apply bg-light-bg;
+  }
+  .icon:hover img {
+    @apply border border-blue-300;
   }
   .component,
   .space-row,
@@ -412,7 +415,7 @@
   /* widget 专属样式 */
 
  
-  /* 简洁tab */
+  /* 简洁tab css */
   @media screen and (min-width: 768px){
     .simple-tab > .tab-container > input[type="radio"]:checked + label::after {
       content: "";

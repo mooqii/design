@@ -16,18 +16,16 @@
 
 <body class="min-h-screen flex flex-col">
     <!-- main -->
-    <div class="bg-gray-200 flex-grow">
-
+    <div class="bg-gray-200 flex-grow relative">
         <!-- 复制成功toast提示 -->
-        <div id="copy-success" class="absolute hidden z-50 top-20 right-0 w-full flex justify-center">
+        <div id="copy-success" class="hidden fixed z-50 top-20 w-full flex justify-center">
             <div class="rounded-md shadow-lg bg-white flex mx-auto space-x-1 px-3 py-1 items-center">
                 <img class="h-6" src="./src/icons/icon-success.svg" alt="">
                 <span class="leading-8">代码复制成功</span>
             </div>
         </div>
-
         <!-- haeader -->
-        <nav id="header" class="fixed w-full z-30 bg-white">
+        <nav id="header" class="fixed top-0 w-full z-30 bg-white">
             <div id="fixnav" class="w-full z-30">
                 <div class="container-1280 items-center">
                     <!--logo & moblie menu / Mobile menu open: "bg-white" -->
@@ -42,7 +40,7 @@
                 </div>
             </div>
         </nav>
-
+        
         <!-- content -->
         <div class="w-full py-24 flex flex-col space-y-6">
             <div class="container-1280 p-4">
@@ -730,17 +728,416 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
                         </code></pre>
                     </div>
                 </div>
+                <div class="title">dark:Icon</div>
+                <div class="icon-box dark">
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-apple.svg" alt=""></div>
+                        <div class="class">icon-apple</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M14.8436 5.40063C16.0327 3.98863 15.9249 2.70328 15.8897 2.24121C14.8389 2.30219 13.6239 2.9566 12.932 3.76111C12.1697 4.62426 11.7217 5.69148 11.8178 6.89473C12.9531 6.98151 13.9898 6.39748 14.8436 5.40063Z&quot; fill=&quot;white&quot;/&gt;
+&lt;path d=&quot;M17.312 12.5575C17.3026 10.9579 18.0274 9.75228 19.491 8.86333C18.6724 7.69057 17.4339 7.04555 15.8015 6.92124C14.2558 6.79927 12.5646 7.82192 11.9454 7.82192C11.291 7.82192 9.79457 6.96346 8.61712 6.96346C6.18716 7.00098 3.60474 8.90086 3.60474 12.7663C3.60474 13.9086 3.81349 15.0884 4.23099 16.3033C4.78923 17.903 6.80168 21.8223 8.90093 21.759C9.99863 21.7332 10.775 20.9803 12.2034 20.9803C13.5896 20.9803 14.3074 21.759 15.5317 21.759C17.6497 21.7285 19.4699 18.1657 19.9999 16.5613C17.1595 15.222 17.312 12.6396 17.312 12.5575Z&quot; fill=&quot;white&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-win.svg" alt=""></div>
+                        <div class="class">icon-win</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M21 3.65099V10.8658C21 11.2232 20.7136 11.5138 20.3585 11.5166L11.8969 11.5842C11.5378 11.5871 11.2452 11.2948 11.2452 10.9334V4.86771C11.2452 4.5438 11.4818 4.2692 11.8004 4.22339L20.262 3.00667C20.6515 2.95063 21 3.25489 21 3.65099ZM10.3549 5.17612V10.9347C10.3549 11.2922 10.0685 11.5827 9.71338 11.5856L3.6518 11.634C3.29268 11.6369 3.00004 11.3446 3.00004 10.9831V6.04776C3.00004 5.72385 3.23666 5.44925 3.55523 5.40344L9.61681 4.53182C10.0063 4.47579 10.3549 4.78005 10.3549 5.17612ZM21 13.1728V20.349C21 20.7441 20.6532 21.048 20.2644 20.9937L11.8029 19.8108C11.4832 19.7661 11.2452 19.4909 11.2452 19.1661V13.139C11.2452 12.7785 11.5362 12.4867 11.8944 12.4881L20.356 12.5219C20.7121 12.5234 21 12.8144 21 13.1728ZM10.3162 13.0941V18.8343C10.3162 19.2277 9.97217 19.5312 9.58474 19.4796L3.56185 18.6777C3.2403 18.6349 3.00002 18.3589 3.00002 18.0324V13.062C3.00002 12.7012 3.2916 12.4092 3.65006 12.4111L9.67292 12.4432C10.0287 12.4451 10.3162 12.7359 10.3162 13.0941Z&quot; fill=&quot;white&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                </div>
                 <div class="title">Icon</div>
                 <div class="icon-box">
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-back.svg" alt=""></div>
+                        <div class="class">icon-back</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.73194 11.5442C3.50725 11.8063 3.50724 12.1932 3.73193 12.4553L9.62037 19.3254C9.80007 19.5351 10.1157 19.5594 10.3254 19.3796C10.5351 19.1999 10.5593 18.8843 10.3796 18.6746L5.0873 12.5H20C20.2761 12.5 20.5 12.2762 20.5 12C20.5 11.7239 20.2761 11.5 20 11.5H5.08692L10.3796 5.32541C10.5593 5.11575 10.5351 4.8001 10.3254 4.62039C10.1157 4.44067 9.80009 4.46495 9.62038 4.67461L3.73194 11.5442Z&quot; fill=&quot;black&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-check-blue.svg" alt=""></div>
+                        <div class="class">icon-check-blue</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M3.5 11L8.7192 17.1681C8.87036 17.3468 9.14192 17.3581 9.30739 17.1926L20 6.5&quot; stroke=&quot;#3396FF&quot; stroke-width=&quot;3&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-close.svg" alt=""></div>
+                        <div class="class">icon-close</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M19.6464 3.64645C19.8417 3.45118 20.1583 3.45118 20.3536 3.64645C20.5488 3.84171 20.5488 4.15829 20.3536 4.35355L12.7071 12L20.3536 19.6464C20.5488 19.8417 20.5488 20.1583 20.3536 20.3536C20.1583 20.5488 19.8417 20.5488 19.6465 20.3536L12 12.7071L4.35355 20.3536C4.15829 20.5488 3.84171 20.5488 3.64645 20.3536C3.45118 20.1583 3.45118 19.8417 3.64645 19.6464L11.2929 12L3.64645 4.35355C3.45119 4.15829 3.45119 3.84171 3.64645 3.64645C3.84171 3.45118 4.15829 3.45118 4.35356 3.64645L12 11.2929L19.6464 3.64645Z&quot; fill=&quot;black&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-double-right.svg" alt=""></div>
+                        <div class="class">icon-double-right</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M7 6L13 12L7 18&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+&lt;path d=&quot;M12 6L18 12L12 18&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-download.svg" alt=""></div>
+                        <div class="class">icon-download</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 7.5C12.2761 7.5 12.5 7.72386 12.5 8V15.7929L16.6464 11.6464C16.8417 11.4512 17.1583 11.4512 17.3536 11.6464C17.5488 11.8417 17.5488 12.1583 17.3536 12.3536L12.502 17.2051C12.2248 17.4823 11.7752 17.4823 11.498 17.2051L6.64645 12.3536C6.45118 12.1583 6.45118 11.8417 6.64645 11.6464C6.84171 11.4512 7.15829 11.4512 7.35355 11.6464L11.5 15.7929V8C11.5 7.72386 11.7239 7.5 12 7.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-error.svg" alt=""></div>
+                        <div class="class">icon-error</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;#FF3F3F&quot;/&gt;
+&lt;rect x=&quot;15.6008&quot; y=&quot;7.55566&quot; width=&quot;1.77778&quot; height=&quot;11.6465&quot; rx=&quot;0.888889&quot; transform=&quot;rotate(45 15.6008 7.55566)&quot; fill=&quot;white&quot;/&gt;
+&lt;rect width=&quot;1.77778&quot; height=&quot;11.6465&quot; rx=&quot;0.888889&quot; transform=&quot;matrix(-0.707107 0.707107 0.707107 0.707107 8.48083 7.55566)&quot; fill=&quot;white&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-eye-close.svg" alt=""></div>
+                        <div class="class">icon-eye-close</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M12 13V17&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M4 8C6.08747 11.0997 8.90265 13 12 13C15.0973 13 17.9125 11.0997 20 8&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M7.13969 12.1182L4.70843 14.8685&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M16.8617 12.1182L19.293 14.8685&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-eye-open.svg" alt=""></div>
+                        <div class="class">icon-eye-open</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M2.62266 12.3213C2.55047 12.1102 2.55047 11.8898 2.62266 11.6787C3.20616 9.9724 5.58171 4.5 12 4.5C18.4183 4.5 20.7938 9.9724 21.3773 11.6787C21.4495 11.8898 21.4495 12.1102 21.3773 12.3213C20.7938 14.0276 18.4183 19.5 12 19.5C5.58171 19.5 3.20616 14.0276 2.62266 12.3213Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3.5&quot; stroke=&quot;black&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
                     <div>
                         <div class="icon"><img src="./src/icons/icon-lock.svg" alt=""></div>
                         <div class="class">icon-lock</div>
                         <button class="btn-code"></button>
                         <pre class="code"><code class="language-css">
 &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-&lt;path d=&quot;M6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10C4.5 9.17157 5.17157 8.5 6 8.5Z&quot; stroke=&quot;black&quot;/&gt;
-&lt;path d=&quot;M9 8.5V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
-&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot; fill-opacity=&quot;0.8&quot;/&gt;
+&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.73194 11.5442C3.50725 11.8063 3.50724 12.1932 3.73193 12.4553L9.62037 19.3254C9.80007 19.5351 10.1157 19.5594 10.3254 19.3796C10.5351 19.1999 10.5593 18.8843 10.3796 18.6746L5.0873 12.5H20C20.2761 12.5 20.5 12.2762 20.5 12C20.5 11.7239 20.2761 11.5 20 11.5H5.08692L10.3796 5.32541C10.5593 5.11575 10.5351 4.8001 10.3254 4.62039C10.1157 4.44067 9.80009 4.46495 9.62038 4.67461L3.73194 11.5442Z&quot; fill=&quot;black&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-back.svg" alt=""></div>
+                        <div class="class">icon-back</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M4.5 10C4.5 9.17157 5.17157 8.5 6 8.5H18C18.8284 8.5 19.5 9.17157 19.5 10V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V10Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 8V5C9 3.34315 10.3431 2 12 2V2C13.6569 2 15 3.34315 15 5V5.27273&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M13 14.5C13 15.0523 12.5523 15.5 12 15.5C11.4477 15.5 11 15.0523 11 14.5C11 13.9477 11.4477 13.5 12 13.5C12.5523 13.5 13 13.9477 13 14.5Z&quot; fill=&quot;black&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-logo.svg" alt=""></div>
+                        <div class="class">icon-logo</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M21.9556 14.8367L21.9307 15.617L21.8484 14.9585C21.5363 12.4558 20.3135 10.1523 18.41 8.48118C16.5065 6.81003 14.0533 5.88627 11.5116 5.88356L4.17235 5.87534L4.19866 5.05834C4.20602 4.83022 4.26218 4.60627 4.36341 4.40133C4.46465 4.1964 4.60865 4.01516 4.78586 3.86964C4.96307 3.72413 5.16943 3.61766 5.39127 3.55731C5.61311 3.49695 5.84535 3.48409 6.07258 3.51957L13.4786 4.67498C15.8971 5.05251 18.0934 6.29359 19.6544 8.16489C21.2155 10.0362 22.0338 12.4088 21.9556 14.8367Z&quot; fill=&quot;#F86DB8&quot;/&gt;
+&lt;path d=&quot;M17.7892 20.595L10.4772 20.5882C8.59454 20.586 6.77754 19.9016 5.36772 18.6636C3.95789 17.4257 3.05232 15.7194 2.8212 13.8656L2.01044 7.37169C1.98671 7.18395 2.00355 6.99335 2.05982 6.81257C2.11609 6.63179 2.21051 6.46496 2.33681 6.32319C2.4631 6.18142 2.61836 6.06796 2.79228 5.99035C2.9662 5.91273 3.15477 5.87275 3.34547 5.87305H4.17378L4.00958 10.9907C3.95205 12.7891 4.55855 14.5465 5.71509 15.9325C6.87163 17.3185 8.49856 18.2377 10.2901 18.5172L18.4508 19.7911C18.8677 19.8561 19.2938 19.8325 19.7007 19.7217C20.1077 19.6109 20.4862 19.4156 20.8113 19.1486C21.1364 18.8816 21.4005 18.5491 21.5862 18.1731C21.7719 17.7972 21.8749 17.3863 21.8883 16.9678L21.9312 15.6171L21.9682 15.9106C22.0414 16.4977 21.9879 17.0936 21.8112 17.6586C21.6346 18.2237 21.3388 18.745 20.9436 19.188C20.5484 19.631 20.0628 19.9856 19.5189 20.2282C18.9751 20.4707 18.3855 20.5958 17.7892 20.595Z&quot; fill=&quot;#3E6FEC&quot;/&gt;
+&lt;path d=&quot;M21.8485 14.9582C21.5364 12.4554 20.3136 10.152 18.4101 8.48084C16.5066 6.80969 14.0534 5.88593 11.5117 5.88322L4.17244 5.875L4.00921 10.9902C3.95168 12.7887 4.55818 14.5461 5.71472 15.9321C6.87126 17.318 8.49819 18.2372 10.2897 18.5167L18.4505 19.7906C18.8673 19.8556 19.2934 19.832 19.7003 19.7212C20.1073 19.6105 20.4859 19.4151 20.8109 19.1481C21.136 18.8812 21.4001 18.5487 21.5858 18.1727C21.7715 17.7967 21.8745 17.3858 21.8879 16.9674L21.9308 15.6166L21.8485 14.9582Z&quot; fill=&quot;#4C2DEB&quot;/&gt;
+&lt;path d=&quot;M14.498 16.9608C16.806 16.9608 18.677 15.1044 18.677 12.8144C18.677 10.5244 16.806 8.66797 14.498 8.66797C12.1899 8.66797 10.3189 10.5244 10.3189 12.8144C10.3189 15.1044 12.1899 16.9608 14.498 16.9608Z&quot; fill=&quot;white&quot;/&gt;
+&lt;path d=&quot;M13.8503 11.3942C13.8503 11.595 13.7903 11.7912 13.6779 11.9582C13.5654 12.1251 13.4056 12.2553 13.2187 12.3321C13.0317 12.4089 12.826 12.429 12.6275 12.3899C12.429 12.3507 12.2467 12.254 12.1036 12.112C11.9605 11.9701 11.863 11.7892 11.8236 11.5922C11.7841 11.3953 11.8043 11.1912 11.8818 11.0057C11.9592 10.8202 12.0904 10.6616 12.2586 10.5501C12.4269 10.4385 12.6247 10.379 12.8271 10.379C12.9619 10.3775 13.0956 10.4028 13.2203 10.4533C13.3451 10.5039 13.4585 10.5786 13.5538 10.6731C13.6491 10.7677 13.7244 10.8802 13.7753 11.004C13.8262 11.1278 13.8517 11.2605 13.8503 11.3942Z&quot; fill=&quot;#4C2DEB&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-notic.svg" alt=""></div>
+                        <div class="class">icon-notic</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;#3396FF&quot;/&gt;
+&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M12 18.1113C12.6136 18.1113 13.1111 17.6139 13.1111 17.0002L13.1111 16.5558L13.1111 11.4447C13.1111 10.831 12.6136 10.3336 12 10.3336V10.3336C11.3863 10.3336 10.8889 10.831 10.8889 11.4447L10.8889 16.5558L10.8889 17.0002C10.8889 17.6139 11.3863 18.1113 12 18.1113V18.1113Z&quot; fill=&quot;white&quot;/&gt;
+&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M12.7989 8.9052C13.0193 8.69978 13.1111 8.43834 13.1111 8.12088C13.1111 7.80342 13.0193 7.54198 12.7989 7.31789C12.5785 7.11248 12.3214 7.00043 12.0092 7.00043C11.6969 7.00043 11.4215 7.11248 11.2011 7.31789C10.9991 7.52331 10.8889 7.78475 10.8889 8.12088C10.8889 8.43834 10.9991 8.69978 11.2011 8.9052C11.4215 9.12929 11.6969 9.22266 12.0092 9.22266C12.3214 9.22266 12.5785 9.12929 12.7989 8.9052Z&quot; fill=&quot;white&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-phone.svg" alt=""></div>
+                        <div class="class">icon-phone</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17C12.5523 17 13 17.4477 13 18Z&quot; fill=&quot;black&quot;/&gt;
+&lt;rect x=&quot;5.5&quot; y=&quot;2.5&quot; width=&quot;13&quot; height=&quot;19&quot; rx=&quot;1.5&quot; stroke=&quot;black&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-profile.svg" alt=""></div>
+                        <div class="class">icon-profile</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M11.5 17.4988V15.5C11.5 15.2239 11.7239 15 12 15C12.2761 15 12.5 15.2239 12.5 15.5V17.4988C12.5 17.7749 12.2761 17.9988 12 17.9988C11.7239 17.9988 11.5 17.7749 11.5 17.4988Z&quot; fill=&quot;black&quot;/&gt;
+&lt;path d=&quot;M17 20.4993H17L6.9998 20.4998C6.9998 20.4998 6.99979 20.4998 6.99978 20.4998C5.81929 20.4998 4.85938 19.5399 4.85938 18.3594V18.0021C4.85938 14.8814 7.39863 12.3404 10.5189 12.3404H10.519L13.4809 12.3399C13.4809 12.3399 13.4809 12.3399 13.4809 12.3399C16.6014 12.34 19.1404 14.879 19.1404 17.9995V18.3589C19.1404 19.5394 18.1805 20.4993 17 20.4993Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M8.5 7C8.5 5.06716 10.0672 3.5 12 3.5C13.9328 3.5 15.5 5.06716 15.5 7C15.5 8.93284 13.9328 10.5 12 10.5C10.0672 10.5 8.5 8.93284 8.5 7Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-success.svg" alt=""></div>
+                        <div class="class">icon-success</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;#76D219&quot;/&gt;
+&lt;path d=&quot;M7.07456 12.0299C7.42169 11.6828 7.9845 11.6828 8.33164 12.0299L11.3151 15.0134C11.6623 15.3606 11.6623 15.9234 11.3151 16.2705C10.968 16.6177 10.4052 16.6177 10.0581 16.2705L7.07456 13.287C6.72742 12.9399 6.72742 12.3771 7.07456 12.0299Z&quot; fill=&quot;white&quot;/&gt;
+&lt;rect x=&quot;16.7461&quot; y=&quot;8.31055&quot; width=&quot;1.77778&quot; height=&quot;10.209&quot; rx=&quot;0.888889&quot; transform=&quot;rotate(45 16.7461 8.31055)&quot; fill=&quot;white&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-verification.svg" alt=""></div>
+                        <div class="class">icon-verification</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M4.5 5.92644C8.55515 5.66524 10.8275 4.04891 12.0001 2.7727C13.1745 4.05042 15.4466 5.66527 19.5 5.92643V11.3294C19.5 14.946 18.3436 18.2479 15.2192 20.0724L12.1974 21.3709C12.0714 21.4251 11.9286 21.4251 11.8026 21.3709L8.78093 20.0724C5.65628 18.2451 4.5 14.9429 4.5 11.3294V5.92644Z&quot; stroke=&quot;black&quot;/&gt;
+&lt;path d=&quot;M9 11.9231L11.3644 14.6512C11.5239 14.8353 11.8094 14.8353 11.9689 14.6512L16 10&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-vip-cloud.svg" alt=""></div>
+                        <div class="class">icon-vip-cloud</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;ellipse cx=&quot;11.9998&quot; cy=&quot;11.9998&quot; rx=&quot;10.6229&quot; ry=&quot;10.6229&quot; fill=&quot;url(#paint0_linear_576:44040)&quot;/&gt;
+&lt;path d=&quot;M7.25925 3.78957C10.1926 2.09601 13.8066 2.09601 16.7399 3.78957C19.6733 5.48313 21.4803 8.61296 21.4803 12.0001C21.4803 15.3872 19.6733 18.517 16.7399 20.2106C13.8066 21.9041 10.1926 21.9041 7.25925 20.2106C4.32592 18.517 2.51891 15.3872 2.51891 12.0001C2.51891 8.61296 4.32592 5.48313 7.25925 3.78957Z&quot; fill=&quot;url(#paint1_linear_576:44040)&quot;/&gt;
+&lt;path d=&quot;M7.44166 4.10521C10.2622 2.47678 13.7372 2.47678 16.5577 4.10521C19.3782 5.73363 21.1157 8.74308 21.1157 11.9999C21.1157 15.2568 19.3782 18.2662 16.5577 19.8946C13.7372 21.5231 10.2622 21.5231 7.44166 19.8946C4.62115 18.2662 2.88364 15.2568 2.88364 11.9999C2.88364 8.74308 4.62115 5.73363 7.44166 4.10521Z&quot; fill=&quot;url(#paint2_linear_576:44040)&quot;/&gt;
+&lt;g filter=&quot;url(#filter0_i_576:44040)&quot;&gt;
+&lt;path d=&quot;M6.27493 7.88516L8.82078 9.58152L11.3581 6.03127C11.4142 5.95274 11.4882 5.88872 11.5741 5.84455C11.6599 5.80039 11.755 5.77734 11.8515 5.77734C11.9481 5.77734 12.0432 5.80039 12.129 5.84455C12.2148 5.88872 12.2889 5.95274 12.3449 6.03127L14.8823 9.58152L17.4281 7.88516C17.5245 7.82109 17.6372 7.78593 17.7529 7.78382C17.8686 7.78172 17.9825 7.81277 18.0811 7.8733C18.1797 7.93383 18.2589 8.02131 18.3094 8.1254C18.3599 8.22949 18.3795 8.34584 18.3659 8.46071L16.7774 16.9225C16.76 17.0699 16.6891 17.2058 16.5782 17.3044C15.3996 18.3519 13.3545 18.518 11.8515 18.518C10.3486 18.518 8.30353 18.3519 7.12491 17.3044C7.01397 17.2058 6.94308 17.0699 6.92571 16.9225L5.33722 8.46011C5.32376 8.34529 5.34345 8.22902 5.39396 8.12502C5.44448 8.02103 5.52371 7.93365 5.6223 7.8732C5.72089 7.81275 5.83472 7.78176 5.95036 7.78388C6.06601 7.786 6.17863 7.82114 6.27493 7.88516Z&quot; fill=&quot;url(#paint3_linear_576:44040)&quot;/&gt;
+&lt;/g&gt;
+&lt;path d=&quot;M8.90866 11.1051C8.89491 11.1051 8.88591 11.1195 8.89196 11.1319L11.1991 15.8478C11.2022 15.8542 11.2087 15.8582 11.2158 15.8582H12.4877C12.4948 15.8582 12.5013 15.8542 12.5044 15.8478L14.8115 11.1319C14.8176 11.1195 14.8086 11.1051 14.7948 11.1051H13.663C13.6557 11.1051 13.6492 11.1093 13.6461 11.1159L11.8615 14.9694H11.842L10.0574 11.1159C10.0543 11.1093 10.0477 11.1051 10.0405 11.1051H8.90866Z&quot; fill=&quot;url(#paint4_linear_576:44040)&quot; stroke=&quot;url(#paint5_linear_576:44040)&quot; stroke-width=&quot;0.0123961&quot;/&gt;
+&lt;path d=&quot;M6.80383 2.99999C10.0192 1.14359 13.9807 1.14359 17.1961 2.99999C20.4115 4.8564 22.3923 8.28717 22.3923 12C22.3923 15.7128 20.4115 19.1435 17.1961 21C13.9807 22.8564 10.0192 22.8564 6.80383 21C3.58845 19.1435 1.60769 15.7128 1.60769 12C1.60769 8.28717 3.58845 4.85639 6.80383 2.99999Z&quot; fill=&quot;url(#paint6_linear_576:44040)&quot;/&gt;
+&lt;path d=&quot;M7.14463 3.59038C10.1492 1.85571 13.8509 1.85571 16.8555 3.59038C19.86 5.32505 21.7109 8.53086 21.7109 12.0002C21.7109 15.4695 19.86 18.6753 16.8555 20.41C13.8509 22.1447 10.1492 22.1447 7.14463 20.41C4.1401 18.6753 2.28923 15.4695 2.28923 12.0002C2.28923 8.53086 4.1401 5.32505 7.14463 3.59038Z&quot; fill=&quot;url(#paint7_linear_576:44040)&quot;/&gt;
+&lt;path d=&quot;M7.22975 3.73749C10.1816 2.03325 13.8184 2.03325 16.7702 3.73749C19.722 5.44173 21.5404 8.59129 21.5404 11.9998C21.5404 15.4082 19.722 18.5578 16.7702 20.262C13.8184 21.9663 10.1816 21.9663 7.22975 20.262C4.27793 18.5578 2.45953 15.4082 2.45953 11.9998C2.45953 8.59129 4.27793 5.44173 7.22975 3.73749Z&quot; fill=&quot;url(#paint8_linear_576:44040)&quot;/&gt;
+&lt;path d=&quot;M7.57034 4.32788C10.3113 2.74537 13.6884 2.74537 16.4293 4.32788C19.1703 5.91039 20.8588 8.83498 20.8588 12C20.8588 15.165 19.1703 18.0896 16.4293 19.6721C13.6884 21.2546 10.3113 21.2546 7.57034 19.6721C4.82936 18.0896 3.14085 15.165 3.14085 12C3.14085 8.83498 4.82936 5.91039 7.57034 4.32788Z&quot; fill=&quot;url(#paint9_linear_576:44040)&quot;/&gt;
+&lt;path d=&quot;M7.74073 4.62307C10.3763 3.10143 13.6234 3.10143 16.259 4.62307C18.8946 6.14471 20.5181 8.95682 20.5181 12.0001C20.5181 15.0434 18.8946 17.8555 16.259 19.3771C13.6234 20.8988 10.3763 20.8988 7.74073 19.3771C5.10517 17.8555 3.4816 15.0434 3.4816 12.0001C3.4816 8.95682 5.10517 6.14471 7.74073 4.62307Z&quot; fill=&quot;url(#paint10_linear_576:44040)&quot;/&gt;
+&lt;g filter=&quot;url(#filter1_ddii_576:44040)&quot;&gt;
+&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M8.97974 16.6533C8.97969 16.6533 8.97964 16.6533 8.97959 16.6533C7.17622 16.6533 5.71429 15.1914 5.71429 13.388C5.71429 11.8432 6.78702 10.549 8.2282 10.2096C8.57209 8.30344 10.2396 6.85742 12.2448 6.85742C14.25 6.85742 15.9175 8.30339 16.2614 10.2095C17.7028 10.5488 18.7757 11.8431 18.7757 13.388C18.7757 15.1914 17.3137 16.6533 15.5104 16.6533C15.5104 16.6533 15.5103 16.6533 15.5103 16.6533V16.6533H8.97974Z&quot; fill=&quot;url(#paint11_linear_576:44040)&quot;/&gt;
+&lt;/g&gt;
+&lt;path d=&quot;M10.9262 11.1356C10.676 11.1356 10.5103 11.3953 10.6157 11.6222L11.7258 14.0107C11.8103 14.1925 11.9926 14.3088 12.1931 14.3088H12.3641C12.5646 14.3088 12.7469 14.1925 12.8314 14.0107L13.9415 11.6222C14.0469 11.3953 13.8813 11.1356 13.631 11.1356C13.4953 11.1356 13.3723 11.2158 13.3177 11.34L12.2789 13.701L12.2786 13.7012L12.2783 13.701L11.2395 11.34C11.1849 11.2158 11.0619 11.1356 10.9262 11.1356Z&quot; fill=&quot;url(#paint12_linear_576:44040)&quot; stroke=&quot;url(#paint13_linear_576:44040)&quot; stroke-width=&quot;0.0257461&quot;/&gt;
+&lt;defs&gt;
+&lt;filter id=&quot;filter0_i_576:44040&quot; x=&quot;5.3331&quot; y=&quot;5.77734&quot; width=&quot;13.037&quot; height=&quot;12.8179&quot; filterUnits=&quot;userSpaceOnUse&quot; color-interpolation-filters=&quot;sRGB&quot;&gt;
+&lt;feFlood flood-opacity=&quot;0&quot; result=&quot;BackgroundImageFix&quot;/&gt;
+&lt;feBlend mode=&quot;normal&quot; in=&quot;SourceGraphic&quot; in2=&quot;BackgroundImageFix&quot; result=&quot;shape&quot;/&gt;
+&lt;feColorMatrix in=&quot;SourceAlpha&quot; type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0&quot; result=&quot;hardAlpha&quot;/&gt;
+&lt;feOffset dy=&quot;0.0777107&quot;/&gt;
+&lt;feGaussianBlur stdDeviation=&quot;0.310843&quot;/&gt;
+&lt;feComposite in2=&quot;hardAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot;/&gt;
+&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.7 0&quot;/&gt;
+&lt;feBlend mode=&quot;normal&quot; in2=&quot;shape&quot; result=&quot;effect1_innerShadow_576:44040&quot;/&gt;
+&lt;/filter&gt;
+&lt;filter id=&quot;filter1_ddii_576:44040&quot; x=&quot;2.55603&quot; y=&quot;3.69916&quot; width=&quot;19.3779&quot; height=&quot;16.1124&quot; filterUnits=&quot;userSpaceOnUse&quot; color-interpolation-filters=&quot;sRGB&quot;&gt;
+&lt;feFlood flood-opacity=&quot;0&quot; result=&quot;BackgroundImageFix&quot;/&gt;
+&lt;feColorMatrix in=&quot;SourceAlpha&quot; type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0&quot; result=&quot;hardAlpha&quot;/&gt;
+&lt;feOffset/&gt;
+&lt;feGaussianBlur stdDeviation=&quot;0.263189&quot;/&gt;
+&lt;feComposite in2=&quot;hardAlpha&quot; operator=&quot;out&quot;/&gt;
+&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0.278431 0 0 0 0 1 0 0 0 0.25 0&quot;/&gt;
+&lt;feBlend mode=&quot;normal&quot; in2=&quot;BackgroundImageFix&quot; result=&quot;effect1_dropShadow_576:44040&quot;/&gt;
+&lt;feColorMatrix in=&quot;SourceAlpha&quot; type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0&quot; result=&quot;hardAlpha&quot;/&gt;
+&lt;feOffset/&gt;
+&lt;feGaussianBlur stdDeviation=&quot;1.57913&quot;/&gt;
+&lt;feComposite in2=&quot;hardAlpha&quot; operator=&quot;out&quot;/&gt;
+&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 0.309804 0 0 0 0 0.545098 0 0 0 0 1 0 0 0 1 0&quot;/&gt;
+&lt;feBlend mode=&quot;normal&quot; in2=&quot;effect1_dropShadow_576:44040&quot; result=&quot;effect2_dropShadow_576:44040&quot;/&gt;
+&lt;feBlend mode=&quot;normal&quot; in=&quot;SourceGraphic&quot; in2=&quot;effect2_dropShadow_576:44040&quot; result=&quot;shape&quot;/&gt;
+&lt;feColorMatrix in=&quot;SourceAlpha&quot; type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0&quot; result=&quot;hardAlpha&quot;/&gt;
+&lt;feOffset/&gt;
+&lt;feGaussianBlur stdDeviation=&quot;3.15827&quot;/&gt;
+&lt;feComposite in2=&quot;hardAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot;/&gt;
+&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0&quot;/&gt;
+&lt;feBlend mode=&quot;normal&quot; in2=&quot;shape&quot; result=&quot;effect3_innerShadow_576:44040&quot;/&gt;
+&lt;feColorMatrix in=&quot;SourceAlpha&quot; type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0&quot; result=&quot;hardAlpha&quot;/&gt;
+&lt;feOffset/&gt;
+&lt;feGaussianBlur stdDeviation=&quot;1.57913&quot;/&gt;
+&lt;feComposite in2=&quot;hardAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot;/&gt;
+&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0&quot;/&gt;
+&lt;feBlend mode=&quot;normal&quot; in2=&quot;effect3_innerShadow_576:44040&quot; result=&quot;effect4_innerShadow_576:44040&quot;/&gt;
+&lt;/filter&gt;
+&lt;linearGradient id=&quot;paint0_linear_576:44040&quot; x1=&quot;16.426&quot; y1=&quot;2.26219&quot; x2=&quot;11.9998&quot; y2=&quot;22.6227&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#5490FF&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#699DFF&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint1_linear_576:44040&quot; x1=&quot;11.9996&quot; y1=&quot;0.201274&quot; x2=&quot;9.0803&quot; y2=&quot;22.9474&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop offset=&quot;0.185597&quot; stop-color=&quot;#FFD952&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#FFCA41&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint2_linear_576:44040&quot; x1=&quot;9.23691&quot; y1=&quot;-1.94735&quot; x2=&quot;14.2369&quot; y2=&quot;23.7105&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop offset=&quot;0.194058&quot; stop-color=&quot;#FFF8D3&quot;/&gt;
+&lt;stop offset=&quot;0.635563&quot; stop-color=&quot;#FFD74B&quot; stop-opacity=&quot;0.26&quot;/&gt;
+&lt;stop offset=&quot;0.881433&quot; stop-color=&quot;#FFE68E&quot; stop-opacity=&quot;0.84&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint3_linear_576:44040&quot; x1=&quot;6.37905&quot; y1=&quot;4.64441&quot; x2=&quot;14.2658&quot; y2=&quot;22.0167&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#FFFCF2&quot;/&gt;
+&lt;stop offset=&quot;0.0001&quot; stop-color=&quot;#FFF9E2&quot;/&gt;
+&lt;stop offset=&quot;0.207855&quot; stop-color=&quot;#FFFAE4&quot;/&gt;
+&lt;stop offset=&quot;0.692186&quot; stop-color=&quot;#FFF4C5&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint4_linear_576:44040&quot; x1=&quot;11.6542&quot; y1=&quot;15.5887&quot; x2=&quot;11.6542&quot; y2=&quot;9.20694&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#FEC601&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#FED601&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint5_linear_576:44040&quot; x1=&quot;12.0493&quot; y1=&quot;15.771&quot; x2=&quot;11.7124&quot; y2=&quot;10.844&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#FEC601&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#FED601&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint6_linear_576:44040&quot; x1=&quot;12&quot; y1=&quot;0&quot; x2=&quot;12&quot; y2=&quot;23.9999&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#87B2FF&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#83AFFF&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint7_linear_576:44040&quot; x1=&quot;8.22641&quot; y1=&quot;2.72784&quot; x2=&quot;11.461&quot; y2=&quot;23.2133&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;white&quot; stop-opacity=&quot;0.83&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;white&quot; stop-opacity=&quot;0.23&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint8_linear_576:44040&quot; x1=&quot;9.30606&quot; y1=&quot;20.5712&quot; x2=&quot;9.30606&quot; y2=&quot;0.979393&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#C9DCFF&quot;/&gt;
+&lt;stop offset=&quot;0.950633&quot; stop-color=&quot;#B5CFFF&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint9_linear_576:44040&quot; x1=&quot;11.9998&quot; y1=&quot;0.974881&quot; x2=&quot;9.27198&quot; y2=&quot;22.2295&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop offset=&quot;0.185597&quot; stop-color=&quot;#5690FF&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#7DAAFF&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint10_linear_576:44040&quot; x1=&quot;9.41826&quot; y1=&quot;-1.03259&quot; x2=&quot;14.0904&quot; y2=&quot;22.9428&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop offset=&quot;0.194058&quot; stop-color=&quot;#D3DFFF&quot;/&gt;
+&lt;stop offset=&quot;0.635563&quot; stop-color=&quot;#4B68FF&quot; stop-opacity=&quot;0.26&quot;/&gt;
+&lt;stop offset=&quot;0.881433&quot; stop-color=&quot;#8EB4FF&quot; stop-opacity=&quot;0.84&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint11_linear_576:44040&quot; x1=&quot;12.245&quot; y1=&quot;6.85742&quot; x2=&quot;12.245&quot; y2=&quot;16.6533&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#E4EDFF&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#C5D9FF&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint12_linear_576:44040&quot; x1=&quot;12.5197&quot; y1=&quot;14.4126&quot; x2=&quot;12.5197&quot; y2=&quot;10.1756&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#5490FF&quot;/&gt;
+&lt;stop offset=&quot;0.0001&quot; stop-color=&quot;#5E96FF&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#4E8BFE&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#3D80FF&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint13_linear_576:44040&quot; x1=&quot;12.7689&quot; y1=&quot;14.5337&quot; x2=&quot;12.5336&quot; y2=&quot;11.2641&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#5D96FF&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#3D80FF&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;/defs&gt;
+&lt;/svg&gt;
+
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-vip.svg" alt=""></div>
+                        <div class="class">icon-vip</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M6.80385 3C10.0192 1.14359 13.9808 1.14359 17.1962 3C20.4115 4.85641 22.3923 8.28719 22.3923 12C22.3923 15.7128 20.4115 19.1436 17.1962 21C13.9808 22.8564 10.0192 22.8564 6.80385 21C3.58846 19.1436 1.6077 15.7128 1.6077 12C1.6077 8.28719 3.58846 4.85641 6.80385 3Z&quot; fill=&quot;url(#paint0_linear_576:44039)&quot;/&gt;
+&lt;path d=&quot;M7.14465 3.59039C10.1492 1.85571 13.8509 1.85571 16.8555 3.59039C19.86 5.32506 21.7109 8.53087 21.7109 12.0002C21.7109 15.4696 19.86 18.6754 16.8555 20.4101C13.8509 22.1447 10.1492 22.1447 7.14465 20.4101C4.14011 18.6754 2.28923 15.4696 2.28923 12.0002C2.28923 8.53087 4.14011 5.32506 7.14465 3.59039Z&quot; fill=&quot;url(#paint1_linear_576:44039)&quot;/&gt;
+&lt;path d=&quot;M7.2298 3.7375C10.1816 2.03326 13.8184 2.03326 16.7703 3.7375C19.7221 5.44174 21.5405 8.59131 21.5405 11.9998C21.5405 15.4083 19.7221 18.5578 16.7703 20.2621C13.8184 21.9663 10.1816 21.9663 7.2298 20.2621C4.27797 18.5578 2.45956 15.4083 2.45956 11.9998C2.45956 8.59131 4.27797 5.44174 7.2298 3.7375Z&quot; fill=&quot;url(#paint2_linear_576:44039)&quot;/&gt;
+&lt;path d=&quot;M7.57036 4.32789C10.3113 2.74537 13.6884 2.74537 16.4294 4.32789C19.1704 5.9104 20.8589 8.835 20.8589 12C20.8589 15.165 19.1704 18.0896 16.4294 19.6722C13.6884 21.2547 10.3113 21.2547 7.57036 19.6722C4.82937 18.0896 3.14085 15.165 3.14085 12C3.14085 8.835 4.82937 5.9104 7.57036 4.32789Z&quot; fill=&quot;url(#paint3_linear_576:44039)&quot;/&gt;
+&lt;path d=&quot;M7.74074 4.62308C10.3763 3.10144 13.6235 3.10144 16.259 4.62308C18.8946 6.14472 20.5182 8.95684 20.5182 12.0001C20.5182 15.0434 18.8946 17.8555 16.259 19.3772C13.6235 20.8988 10.3763 20.8988 7.74074 19.3772C5.10518 17.8555 3.4816 15.0434 3.4816 12.0001C3.4816 8.95684 5.10518 6.14472 7.74074 4.62308Z&quot; fill=&quot;url(#paint4_linear_576:44039)&quot;/&gt;
+&lt;g filter=&quot;url(#filter0_i_576:44039)&quot;&gt;
+&lt;path d=&quot;M7.04668 8.33666L9.26409 9.82108L11.4741 6.71439C11.5229 6.64567 11.5874 6.58965 11.6622 6.551C11.7369 6.51235 11.8198 6.49219 11.9039 6.49219C11.9879 6.49219 12.0708 6.51235 12.1456 6.551C12.2203 6.58965 12.2848 6.64567 12.3336 6.71439L14.5436 9.82108L16.7611 8.33666C16.845 8.28059 16.9431 8.24982 17.0439 8.24798C17.1447 8.24614 17.2439 8.27331 17.3298 8.32628C17.4157 8.37924 17.4847 8.45579 17.5286 8.54688C17.5726 8.63797 17.5896 8.73978 17.5778 8.8403L16.7104 16.2449C16.6952 16.3739 16.6335 16.4928 16.5369 16.5791C16.4402 16.6654 16.3154 16.713 16.1861 16.713C16.1861 16.713 15.0581 17.1225 11.9039 17.1225C8.74964 17.1225 7.62162 16.713 7.62162 16.713C7.49231 16.713 7.3675 16.6654 7.27087 16.5791C7.17423 16.4928 7.11249 16.3739 7.09736 16.2449L6.22993 8.83977C6.21821 8.7393 6.23536 8.63755 6.27936 8.54655C6.32336 8.45555 6.39237 8.37909 6.47824 8.32619C6.56411 8.27329 6.66326 8.24617 6.76398 8.24803C6.86471 8.24988 6.9628 8.28063 7.04668 8.33666Z&quot; fill=&quot;url(#paint5_linear_576:44039)&quot;/&gt;
+&lt;/g&gt;
+&lt;path d=&quot;M10.5491 11.5936C10.2989 11.5936 10.1332 11.8533 10.2386 12.0802L11.3127 14.3912C11.4192 14.6203 11.6489 14.7669 11.9015 14.7669C12.1541 14.7669 12.3838 14.6203 12.4903 14.3912L13.5644 12.0802C13.6698 11.8533 13.5042 11.5936 13.2539 11.5936C13.1182 11.5936 12.9953 11.6738 12.9406 11.798L11.9018 14.159L11.9015 14.1592L11.9012 14.159L10.8624 11.798C10.8078 11.6738 10.6848 11.5936 10.5491 11.5936Z&quot; fill=&quot;url(#paint6_linear_576:44039)&quot; stroke=&quot;url(#paint7_linear_576:44039)&quot; stroke-width=&quot;0.0257461&quot;/&gt;
+&lt;defs&gt;
+&lt;filter id=&quot;filter0_i_576:44039&quot; x=&quot;6.22635&quot; y=&quot;6.49219&quot; width=&quot;11.3551&quot; height=&quot;10.7586&quot; filterUnits=&quot;userSpaceOnUse&quot; color-interpolation-filters=&quot;sRGB&quot;&gt;
+&lt;feFlood flood-opacity=&quot;0&quot; result=&quot;BackgroundImageFix&quot;/&gt;
+&lt;feBlend mode=&quot;normal&quot; in=&quot;SourceGraphic&quot; in2=&quot;BackgroundImageFix&quot; result=&quot;shape&quot;/&gt;
+&lt;feColorMatrix in=&quot;SourceAlpha&quot; type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0&quot; result=&quot;hardAlpha&quot;/&gt;
+&lt;feOffset dy=&quot;0.128731&quot;/&gt;
+&lt;feGaussianBlur stdDeviation=&quot;0.514922&quot;/&gt;
+&lt;feComposite in2=&quot;hardAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot;/&gt;
+&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.7 0&quot;/&gt;
+&lt;feBlend mode=&quot;normal&quot; in2=&quot;shape&quot; result=&quot;effect1_innerShadow_576:44039&quot;/&gt;
+&lt;/filter&gt;
+&lt;linearGradient id=&quot;paint0_linear_576:44039&quot; x1=&quot;12&quot; y1=&quot;0&quot; x2=&quot;12&quot; y2=&quot;24&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#FFE68C&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#FFD339&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint1_linear_576:44039&quot; x1=&quot;8.22643&quot; y1=&quot;2.72784&quot; x2=&quot;11.461&quot; y2=&quot;23.2133&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;white&quot; stop-opacity=&quot;0.83&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;white&quot; stop-opacity=&quot;0.23&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint2_linear_576:44039&quot; x1=&quot;7.67988&quot; y1=&quot;2.27944&quot; x2=&quot;18.0483&quot; y2=&quot;23.0162&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#FFF4CB&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#FFDF6C&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint3_linear_576:44039&quot; x1=&quot;11.9999&quot; y1=&quot;0.974879&quot; x2=&quot;9.272&quot; y2=&quot;22.2295&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop offset=&quot;0.185597&quot; stop-color=&quot;#FFD952&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#FFCA41&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint4_linear_576:44039&quot; x1=&quot;9.41828&quot; y1=&quot;-1.0326&quot; x2=&quot;14.0904&quot; y2=&quot;22.9428&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop offset=&quot;0.194058&quot; stop-color=&quot;#FFF8D3&quot;/&gt;
+&lt;stop offset=&quot;0.635563&quot; stop-color=&quot;#FFD74B&quot; stop-opacity=&quot;0.26&quot;/&gt;
+&lt;stop offset=&quot;0.881433&quot; stop-color=&quot;#FFE68E&quot; stop-opacity=&quot;0.84&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint5_linear_576:44039&quot; x1=&quot;7.13737&quot; y1=&quot;5.5008&quot; x2=&quot;14.0599&quot; y2=&quot;20.6783&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#FFFCF2&quot;/&gt;
+&lt;stop offset=&quot;0.0001&quot; stop-color=&quot;#FFF9E2&quot;/&gt;
+&lt;stop offset=&quot;0.207855&quot; stop-color=&quot;#FFFAE4&quot;/&gt;
+&lt;stop offset=&quot;0.692186&quot; stop-color=&quot;#FFF4C5&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint6_linear_576:44039&quot; x1=&quot;11.7769&quot; y1=&quot;14.754&quot; x2=&quot;11.7769&quot; y2=&quot;10.5169&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#FEC601&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#FED601&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;linearGradient id=&quot;paint7_linear_576:44039&quot; x1=&quot;12.0261&quot; y1=&quot;14.875&quot; x2=&quot;11.7908&quot; y2=&quot;11.6054&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;
+&lt;stop stop-color=&quot;#FEC601&quot;/&gt;
+&lt;stop offset=&quot;1&quot; stop-color=&quot;#FED601&quot;/&gt;
+&lt;/linearGradient&gt;
+&lt;/defs&gt;
+&lt;/svg&gt;
+
+                    </code></pre>
+                    </div>
+                    <div>
+                        <div class="icon"><img src="./src/icons/icon-warning.svg" alt=""></div>
+                        <div class="class">icon-warning</div>
+                        <button class="btn-code"></button>
+                        <pre class="code"><code class="language-css">
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;#FFAA00&quot;/&gt;
+&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M11.9997 7.55566C11.3962 7.55566 10.9167 8.06257 10.9502 8.66506L11.2178 13.4827C11.2409 13.8977 11.5841 14.2223 11.9997 14.2223C12.4152 14.2223 12.7584 13.8977 12.7815 13.4827L13.0491 8.66507C13.0826 8.06258 12.6031 7.55566 11.9997 7.55566Z&quot; fill=&quot;white&quot;/&gt;
+&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M11.2008 15.6505C10.9804 15.8559 10.8885 16.1173 10.8885 16.4348C10.8885 16.7522 10.9804 17.0137 11.2008 17.2378C11.4211 17.4432 11.6783 17.5552 11.9905 17.5552C12.3027 17.5552 12.5782 17.4432 12.7986 17.2378C13.0006 17.0324 13.1108 16.7709 13.1108 16.4348C13.1108 16.1173 13.0006 15.8559 12.7986 15.6505C12.5782 15.4264 12.3027 15.333 11.9905 15.333C11.6783 15.333 11.4211 15.4264 11.2008 15.6505Z&quot; fill=&quot;white&quot;/&gt;
 &lt;/svg&gt;
                     </code></pre>
                     </div>
@@ -1312,12 +1709,12 @@ tab13
         // btn-code 点击复制代码
         const btnCodes = document.getElementsByClassName("btn-code")
         const copySuccess = document.getElementById("copy-success")
-        for (let btnCode of btnCodes){
-            btnCode.onclick = () =>{
+        for (let btnCode of btnCodes) {
+            btnCode.onclick = () => {
                 const code = btnCode.nextElementSibling.firstElementChild.textContent
                 const input = document.createElement('input')
                 document.body.appendChild(input)
-                input.setAttribute('value',code)
+                input.setAttribute('value', code)
                 input.select()
                 document.execCommand('copy')
                 document.body.removeChild(input)
